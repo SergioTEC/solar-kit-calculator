@@ -18,20 +18,30 @@
         <label for="sunlightHours"><b>Sunlight Hours:</b></label>
         <input type="number" id="sunlightHours" placeholder="Enter sunlight hours">
 
+        <label for="modulePower"><b>Module Power (W):</b></label>
+        <input type="number" id="modulePower" placeholder="Enter module power in watts">
+
+        <label for="inverterPower"><b>Inverter Power (kW):</b></label>
+        <input type="number" id="inverterPower" placeholder="Enter inverter power in kW">
+
+        <label for="numberInverters"><b>Number of Inverters Desired:</b></label>
+        <input type="number" id="numberInverters" placeholder="Enter desired number of inverters">
+
         <label for="inverterType"><b>Inverter Type:</b></label>
         <select id="inverterType">
             <option value="ongrid">On-Grid (No Battery)</option>
             <option value="offgrid">Off-Grid (With Battery)</option>
         </select>
 
-        <button id="Calculate"><b>Calculate</b></button>
+        <button id="calculate"><b>Calculate</b></button>
 
         <div id="results">
             <b>
                 <h2>Results:</h2>
-                <p>Number of Panels: <span id="panels"></span></p>
+                <p>Number of Modules: <span id="modules"></span> (<span id="modulePowerResult"></span>)</p>
                 <p>Battery Capacity (kWh): <span id="batteries"></span></p>
-                <p>Inverter Size (kW): <span id="inverter"></span></p>
+                <p>Number of Inverters: <span id="inverters"></span> (<span id="inverterPowerResult"></span>)</p>
+                <p>Total Inverter Capacity (kW): <span id="totalInverterCapacity"></span></p>
             </b>
         </div>
     </div>
