@@ -7,14 +7,14 @@ $(document).ready(function () {
         const numberInverters = $("#numberInverters").val();
         const inverterType = $("#inverterType").val();
 
-        if (!dailyConsumption || !sunlightHours || !modulePower || !inverterPower || !numberInverters) {
+        if (!dailyConsumption || !sunlightHours || !modulePower || !inverterPower || !numberInverters || !inverterType) {
             alert("Fill in all the fields.");
             return;
         }
 
         $.ajax({
             type: "POST",
-            url: "../controller/SolarController.php",
+            url: "../controller/SolarController.php/kitCalculation",
             data: {
                 daily_consumption: dailyConsumption,
                 sunlight_hours: sunlightHours,
