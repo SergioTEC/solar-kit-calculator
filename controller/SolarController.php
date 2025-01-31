@@ -22,7 +22,7 @@ class SolarController {
                 $_POST['inverter_type']
             );
         
-            echo json_encode(["error" => false, 'result' => $result]);
+            echo json_encode(["error" => false, "result" => $result]);
             exit;
         
         } else {
