@@ -24,9 +24,6 @@
         <label for="inverterPower"><b>Inverter Power (kW):</b></label>
         <input type="number" id="inverterPower" placeholder="Enter inverter power in kW">
 
-        <label for="numberInverters"><b>Number of Inverters Desired:</b></label>
-        <input type="number" id="numberInverters" placeholder="Enter desired number of inverters">
-
         <label for="inverterType"><b>Inverter Type:</b></label>
         <select id="inverterType">
             <option value="ongrid">On-Grid (No Battery)</option>
@@ -38,10 +35,10 @@
         <div id="results">
             <b>
                 <h2>Results:</h2>
-                <p>Number of Modules: <span id="modules"></span> (<span id="modulePowerResult"></span>)</p>
-                <p>Battery Capacity (kWh): <span id="batteries"></span></p>
-                <p>Number of Inverters: <span id="inverters"></span> (<span id="inverterPowerResult"></span>)</p>
-                <p>Total Inverter Capacity (kW): <span id="totalInverterCapacity"></span></p>
+                <p>Number of Modules: <span id="modules"></span> (Module Power: <span id="modulePowerResult"></span> W)</p>
+                <p>Battery Capacity: <span id="batteries"></span> (kWh)</p>
+                <p>Number of Inverters: <span id="inverters"></span> (Inverter Power: <span id="inverterPowerResult"></span> kW)</p>
+                <p>Total Inverter Capacity: <span id="totalInverterCapacity"> (kW)</span></p>
             </b>
         </div>
     </div>

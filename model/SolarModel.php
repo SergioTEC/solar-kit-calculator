@@ -2,7 +2,7 @@
 
 class SolarModel {
 
-    public function calculate($daily_consumption, $sunlight_hours, $module_power, $inverter_power, $number_inverters, $inverter_type) {
+    public function calculate($daily_consumption, $sunlight_hours, $module_power, $inverter_power, $inverter_type) {
         
         $url = 'http://localhost:8081/calculate';
 
@@ -11,7 +11,6 @@ class SolarModel {
             'sunlight_hours' => (float) $sunlight_hours,
             'module_power' => (float) $module_power,
             'inverter_power' => (float) $inverter_power,
-            'number_inverters' => (int) $number_inverters,
             'inverter_type' => $inverter_type,
         ];
 

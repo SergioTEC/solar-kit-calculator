@@ -3,13 +3,12 @@ require_once '../model/SolarModel.php';
 
 class SolarController {
  
-    public function kitCalculation () {
+    public function kitCalculation() {
         if (
             !empty($_POST['daily_consumption']) &&
             !empty($_POST['sunlight_hours']) &&
             !empty($_POST['module_power']) &&
             !empty($_POST['inverter_power']) &&
-            !empty($_POST['number_inverters']) &&
             !empty($_POST['inverter_type'])
         ) {
         
@@ -18,7 +17,6 @@ class SolarController {
                 $_POST['sunlight_hours'], 
                 $_POST['module_power'], 
                 $_POST['inverter_power'], 
-                $_POST['number_inverters'], 
                 $_POST['inverter_type']
             );
         
@@ -30,4 +28,11 @@ class SolarController {
             exit;
         }
     }
+}
+
+if (
+    isset($_POST['action']) &&
+    $_POST['action'] === 'kitCalculation'
+) {
+    (new SolarController())->kitCalculation();
 }
